@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.rubik-font {
+    font-family: 'Rubik', sans-serif;
+}
+
+.poppins-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+.audiowide-font {
+    font-family: 'Audiowide', cursive;
+}
+
+.VT323-font {
+    font-family: 'VT323', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Audiowide', cursive;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    background-image: url("https://wallpaperaccess.com/full/2825826.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1rem;
+    background-color: rgba(12, 9, 38, 0.466);
+    backdrop-filter: blur(5px);
+    overflow-y: hidden;
+}
+
+.loader {
+    width: 60%;
+    height: 25px;
+    border-radius: 20px;
+    color: #abe4ff;
+    border: 2px solid;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: #3BBDF7;
+    animation: l6 1s infinite;
+}
+
+@keyframes l6 {
+    100% {
+        inset: 0
+    }
+}
+
+@keyframes l6 {
+    100% {
+        inset: 0
+    }
+}
+
+@keyframes innerShadowColorChange {
+
+    0%,
+    100% {
+        box-shadow: inset 0 0 15px #1cdefc;
+    }
+
+    50% {
+        box-shadow: inset 0 0 15px #e628df;
+    }
+}
+
+form {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 5px solid rgba(25, 240, 255, 0.828);
+}
+
+form:hover {
+    box-shadow: 0px 0px 10px 0px #db11ff, inset 0px 0px 20px 0px #db11ff;
+    animation: innerShadowColorChange 3s linear infinite;
+    scale: 1.03;
+}
+
+@media (max-width: 650px) {
+    form:hover {
+        scale: 1;
+    }
+}
+
+.locker {
+    position: relative;
+    right: 3px;
+}
+
+.lockerRegister {
+    position: relative;
+    right: 3px;
+}
+
+.lockerEmailRegister {
+    position: relative;
+    right: 1px;
+}
+
+
+@keyframes slideColor {
+    0% {
+        background-position: left;
+    }
+
+    50% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: left;
+    }
+}
+
+.title-animation {
+    background: linear-gradient(to right, #1cdefc, #e628df);
+    background-size: 400% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: slideColor 3s linear infinite;
+}
+
+.reverse-title-animation {
+    background: linear-gradient(to left, #e628df, #1cdefc);
+    background-size: 400% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: slideColor 3s linear infinite;
+}
+
+.MAX-H {
+    max-height: 90vh;
+}
+
+.raoul {
+    text-shadow: 0 0 10px #ffffffa3;
+    background-size: 100% auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.raoul:hover {
+    text-shadow: 0 0 1px #8bf0ff;
+    scale: 1.2;
+}
+
+/* Scrollbar qui va avec les couleurs  */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8bf0ff;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3bbdf7;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #8bf0ff;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #8bf0ff;
+}
+
+::-webkit-scrollbar-corner {
+    background: #1cdefc;
+}
+
+
+/* HTML: <div class="loader3"></div> */
+.loader3 {
+    width: 4rem;
+    aspect-ratio: 1;
+    display: grid;
+    color: #1befaf;
+    -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+    animation: l3 1.5s infinite linear;
+}
+
+.loader3:before,
+.loader3:after {
+    content: "";
+    grid-area: 1/1;
+    background:
+        radial-gradient(farthest-side at bottom left, currentColor 94%, #0000) top left,
+        radial-gradient(farthest-side at top right, currentColor 94%, #0000) bottom right;
+    background-size: 63% 50%;
+    background-repeat: no-repeat;
+    -webkit-mask:
+        radial-gradient(65% 110% at bottom left, #0000 94%, #000) top left,
+        radial-gradient(65% 110% at top right, #0000 94%, #000) bottom right;
+    -webkit-mask-size: 62% 50%;
+    -webkit-mask-repeat: no-repeat;
+}
+
+.loader3:after {
+    transform: rotate(90deg);
+}
+
+@keyframes l3 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
+
+
+.loaderBis {
+    width: 60%;
+    height: 25px;
+    border-radius: 20px;
+    color: #c9ffef;
+    border: 2px solid;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.loaderBis::before {
+    content: "";
+    position: absolute;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: #1befaf;
+    animation: l6 1s infinite;
+}
+
+.logoutColor {
+    background-color: #00d595;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+.logoutColor:hover {
+    background-color: #006849;
+    scale: 0.96;
+    color: #40ffc6;
+}
+
+.logoColor {
+    transition: all 0.2s ease-in-out;
+}
+
+.logoColor:hover {
+    color: #00d595;
+}
+
+.discussionTitleShadow {
+    text-shadow: 0 0 20px #60c5ffb9;
+}
+
+.modale-overlay
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0.9;
+}
+
+.modale-shadow
+{
+    box-shadow: 0px 0px 5px 0px #e6f6ffb9, inset 0px 0px 1px 0px #60c5ffb9;
+}
